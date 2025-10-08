@@ -1,45 +1,38 @@
-
 public class Player {
-	private int pid;
-	private String name;
-	private String Speciality;
-	
+   private int pid;
+   private String pname;
+   private String speciality;
 	public Player() {
 		super();
-		pid =0;
-		name = null;
-		Speciality = null;
 	}
-	
-	public Player(int pid, String name, String speciality) {
+	public Player(int pid, String pname, String speciality) {
 		super();
 		this.pid = pid;
-		this.name = name;
-		Speciality = speciality;
+		this.pname = pname;
+		this.speciality = speciality;
 	}
-
 	public int getPid() {
 		return pid;
 	}
 	public void setPid(int pid) {
 		this.pid = pid;
 	}
-	public String getName() {
-		return name;
+	public String getPname() {
+		return pname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 	public String getSpeciality() {
-		return Speciality;
+		return speciality;
 	}
 	public void setSpeciality(String speciality) {
-		Speciality = speciality;
+		this.speciality = speciality;
 	}
+	@Override
 	public String toString() {
 		return "Player [pid=" + pid + ", pname=" + pname + ", speciality=" + speciality + "]";
 	}
 	
    
-	
 }

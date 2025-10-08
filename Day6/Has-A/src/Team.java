@@ -1,21 +1,24 @@
+import java.util.Arrays;
 
 public class Team {
-	private int tid;
-	private String tname;
-	Player[] plist;
-	private String Captain;
-	private int size;
+     private int tid;
+     private String tname;
+     private Player captain;
+     private Player[] plist;
+     private int size;
 	public Team() {
 		super();
 	}
-	public Team(int tid, String tname, Player[] plist, String captain, int size) {
+	
+	public Team(int tid, String tname, Player captain, Player[] plist, int size) {
 		super();
 		this.tid = tid;
 		this.tname = tname;
+		this.captain = captain;
 		this.plist = plist;
-		Captain = captain;
-		this.size =size;
+		this.size = size;
 	}
+
 	public int getTid() {
 		return tid;
 	}
@@ -28,18 +31,19 @@ public class Team {
 	public void setTname(String tname) {
 		this.tname = tname;
 	}
+	public Player getCaptain() {
+		return captain;
+	}
+	public void setCaptain(Player captain) {
+		this.captain = captain;
+	}
 	public Player[] getPlist() {
 		return plist;
 	}
 	public void setPlist(Player[] plist) {
 		this.plist = plist;
 	}
-	public String getCaptain() {
-		return Captain;
-	}
-	public void setCaptain(String captain) {
-		Captain = captain;
-	}
+	
 	public int getSize() {
 		return size;
 	}
@@ -54,5 +58,4 @@ public class Team {
 				+ "]";
 	}
      
-	
 }
