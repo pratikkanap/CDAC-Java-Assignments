@@ -1,0 +1,81 @@
+package StringFunctions;
+
+import java.util.stream.Stream;
+
+public class TestString {
+
+	public static void main(String[] args) {
+		//String Inbuilt function
+		String fname = "Aditya";
+		String lname = "Joag";
+		
+		//Concatenation using +
+		System.out.println("The concationation of String : "+(fname+" "+lname));
+		
+		//CharAt
+		System.out.println("The location of character : "+fname.charAt(3));
+		
+		//Join
+		String str = String.join(" ",fname, lname);
+		System.out.println("The name of person is : "+str);
+		
+		//equals using equals
+		String a = "First,second,third";
+		String b = " ";
+		System.out.println("The inbuild equal to : "+(a.equals(b)));
+		
+		//equals using ==
+		System.out.println("a == b : "+( a == b));
+		
+		//append
+		StringBuffer sbf = new StringBuffer("Pratik");
+		System.out.println("String append : " +(sbf.append("Kanap")));
+		
+		//split
+		String[] arr=a.split(",");
+		for (String a1: arr)
+			System.out.println(a1);
+		
+		//concat using concat
+		System.out.println("The string using concat are :" +fname.concat(lname));
+		
+		//length
+		System.out.println("The length of string is :" +a.length());
+		
+		//substring
+		System.out.println("The substring of string is :"+a.substring(0,7));
+		
+		//indexOf
+		System.out.println("The index of string is :"+a.indexOf('s'));	
+		
+		//LastIndexof
+		System.out.println("The last Index of string is:" +a.lastIndexOf('i'));
+		
+		//startsWith
+		System.out.println("The string starts with :"+a.startsWith("second"));
+		
+		//endsWith
+		System.out.println("The string ends with :"+a.endsWith("third"));
+		
+		//isEmpty/isBlank
+		System.out.println("The string is empty or not :"+b.isBlank());
+		
+		//replace
+		System.out.println("Replace string :"+a.replace('F','l'));
+		
+		//contains
+		String str1 = "Hello World";
+		boolean contains = str1.contains("World"); 
+		System.out.println(contains);
+		
+		String str2 = "rain in SPAIN in plain";
+		Stream<String> lines = str2.lines();
+		lines.forEach(System.out::println);
+		String str3 = "   Hello World   ";  
+		System.out.println("using strip :"+str3.strip());
+	    System.out.println("using stripleading :"+str3.stripLeading());
+	    System.out.println("using stripTrailing :"+str3.stripTrailing());
+		
+		
+	}
+}
